@@ -125,14 +125,14 @@ class WKHtmlToPdf(object):
         Render the URL into a pdf and setup the evironment if required.
         """
 
-        # setup the environment if it isn't set up yet
-        if not os.getenv('DISPLAY'):
-            os.system("Xvfb :0 -screen 0 %sx%sx%s & " % (
-                self.screen_resolution[0],
-                self.screen_resolution[1],
-                self.color_depth
-            ))
-            os.putenv("DISPLAY", '127.0.0.1:0')
+        # # setup the environment if it isn't set up yet
+        # if not os.getenv('DISPLAY'):
+        #     os.system("Xvfb :0 -screen 0 %sx%sx%s & " % (
+        #         self.screen_resolution[0],
+        #         self.screen_resolution[1],
+        #         self.color_depth
+        #     ))
+        #     os.putenv("DISPLAY", '127.0.0.1:0')
 
         # execute the command
         command = 'wkhtmltopdf %s "%s" "%s" >> /tmp/wkhtp.log' % (
