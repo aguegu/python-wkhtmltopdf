@@ -1,6 +1,7 @@
 wkhtmltopdf-wrapper
 ==================
-A simple python wrapper for the wkhtmltopdf lib (https://github.com/wkhtmltopdf/wkhtmltopdf)
+
+A simple and direct python wrapper for the wkhtmltopdf lib (https://github.com/wkhtmltopdf/wkhtmltopdf)
 inspired by inspired by Qoda\'s python-wkhtmltopdf
 
 Requirements
@@ -11,7 +12,7 @@ System:
 
 - Linux 32/64 or OSX only (Windows is not supported at this stage)
 - wkhtmltopdf
-- python 2.5+
+- python 2.5+ / python3
 
 Installation
 ------------
@@ -27,6 +28,8 @@ wkhtmltopdf (Linux)
 
     $ sudo apt-get install wkhtmltopdf    
 
+    or goto [http://wkhtmltopdf.org/downloads.html](http://wkhtmltopdf.org/downloads.html) for the latest release (Recommended)
+
 wkhtmltopdf (OSX)
 ~~~~~~~~~~~~~~~~~
 
@@ -34,7 +37,11 @@ wkhtmltopdf (OSX)
 
     $ brew install wkhtmltopdf
 
-python-wkhtmltopdf (Any Platform)
+    or 
+
+    $ goto [http://wkhtmltopdf.org/downloads.html](http://wkhtmltopdf.org/downloads.html) for the latest release (Recommended)
+
+wkhtmltopdf-wrapper (Any Platform)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 1. Development::
@@ -45,6 +52,10 @@ python-wkhtmltopdf (Any Platform)
     $ pip install -r requirements.pip
 
 2. PIP::
+
+    $ pip install wkhtmltopdf-wrapper
+
+    or 
 
     $ pip install git+https://github.com/aguegu/python-wkhtmltopdf.git    
 
