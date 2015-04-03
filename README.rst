@@ -20,44 +20,42 @@ Installation
 wkhtmltopdf (Linux)
 ~~~~~~~~~~~~~~~~~~~
 
-1. Install Fonts::
+1. Install Fonts:
 
-    $ sudo apt-get install xfonts-100dpi xfonts-75dpi xfonts-scalable xfonts-cyrillic
+> $ sudo apt-get install xfonts-100dpi xfonts-75dpi xfonts-scalable xfonts-cyrillic
 
-2. Install wkhtmltopdf::
+2. Install wkhtmltopdf:
 
-    $ sudo apt-get install wkhtmltopdf    
+> $ sudo apt-get install wkhtmltopdf    
 
-    or goto [http://wkhtmltopdf.org/downloads.html](http://wkhtmltopdf.org/downloads.html) for the latest release (Recommended)
+  or goto [http://wkhtmltopdf.org/downloads.html](http://wkhtmltopdf.org/downloads.html) for the latest release (Recommended)
 
 wkhtmltopdf (OSX)
 ~~~~~~~~~~~~~~~~~
 
-1. Install wkhtmltopdf::
+1. Install wkhtmltopdf:
 
-    $ brew install wkhtmltopdf
+> $ brew install wkhtmltopdf
 
-    or 
-
-    $ goto [http://wkhtmltopdf.org/downloads.html](http://wkhtmltopdf.org/downloads.html) for the latest release (Recommended)
+    or goto [http://wkhtmltopdf.org/downloads.html](http://wkhtmltopdf.org/downloads.html) for the latest release (Recommended)
 
 wkhtmltopdf-wrapper (Any Platform)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-1. Development::
+1. Development:
 
-    $ git clone https://github.com/aguegu/python-wkhtmltopdf.git
-    $ cd python-wkhtmltopdf
-    $ virtualenv .
-    $ pip install -r requirements.pip
+>  $ git clone https://github.com/aguegu/python-wkhtmltopdf.git
+>  $ cd python-wkhtmltopdf
+>  $ virtualenv .
+>  $ pip install -r requirements.pip
 
-2. PIP::
+2. PIP:
 
-    $ pip install wkhtmltopdf-wrapper
+>  $ pip install wkhtmltopdf-wrapper
 
-    or 
+   or 
 
-    $ pip install git+https://github.com/aguegu/python-wkhtmltopdf.git    
+>  $ pip install git+https://github.com/aguegu/python-wkhtmltopdf.git    
 
 Usage
 -----
