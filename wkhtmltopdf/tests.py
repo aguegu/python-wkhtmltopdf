@@ -8,9 +8,9 @@ from wkhtmltopdf.main import WKHtmlToPdf, wkhtmltopdf
 
 class MainTestCase(unittest.TestCase):
     def setUp(self):
-        self.url = "http://www.example.com"
-        self.output_file = "/tmp/example.pdf"
-        self.wkhtmltopdf = WKHtmlToPdf(self.url, self.output_file)
+        self.url = "http://cn.bing.com"
+        self.output_file = "/tmp/bing.pdf"
+        self.wkhtmltopdf = WKHtmlToPdf()
 
     def test_wkhtmltopdf_callable(self):
         wkhtmltopdf(self.url, self.output_file)

@@ -9,7 +9,6 @@ System:
 ~~~~~~~
 
 - Linux 32/64 or OSX only (Windows is not supported at this stage)
-- Xvfd
 - wkhtmltopdf
 - python 2.5+
 
@@ -19,17 +18,13 @@ Installation
 wkhtmltopdf (Linux)
 ~~~~~~~~~~~~~~~~~~~
 
-1. Install Xvfd::
-
-    $ sudo apt-get install xvfb
-
-2. Install Fonts::
+1. Install Fonts::
 
     $ sudo apt-get install xfonts-100dpi xfonts-75dpi xfonts-scalable xfonts-cyrillic
 
-3. Install wkhtmltopdf::
+2. Install wkhtmltopdf::
 
-    $ sudo apt-get install wkhtmltopdf
+    $ sudo apt-get install wkhtmltopdf    
 
 wkhtmltopdf (OSX)
 ~~~~~~~~~~~~~~~~~
@@ -43,18 +38,14 @@ python-wkhtmltopdf (Any Platform)
 
 1. Development::
 
-    $ git clone git@github.com:qoda/python-wkhtmltopdf.git
+    $ git clone https://github.com/aguegu/python-wkhtmltopdf.git
     $ cd python-wkhtmltopdf
     $ virtualenv .
     $ pip install -r requirements.pip
 
 2. PIP::
 
-    $ pip install git+https://github.com/qoda/python-wkhtmltopdf.git
-
-    or from pypi
-
-    $ pip install python-wkhtmltopdf
+    $ pip install git+https://github.com/aguegu/python-wkhtmltopdf.git    
 
 Usage
 -----
@@ -66,48 +57,23 @@ Simple Usage::
 
     from wkhtmltopdf import WKHtmlToPdf
 
-    wkhtmltopdf = WKHtmlToPdf(
-        url='http://www.example.com',
-        output_file='~/example.pdf',
-    )
-    wkhtmltopdf.render()
+    wkhtmltopdf = WKHtmlToPdf('-T 20 -B 20 -g --zoom 1.5')
+
+    # the option_string would be sent to the wkhtmltopdf command line in 
+    # the exactly the same shape.
+    # so the options can be anything as long as the wkhtmltopdf supports
+    # check its [usage](http://wkhtmltopdf.org/usage/wkhtmltopdf.txt)
+
+    wkhtmltopdf.render('http://www.example.com', '~/example.pdf')
+
+    # the source url, and the output file
 
 2. Use from method::
 
     from wkhtmltopdf import wkhtmltopdf
 
-    wkhtmltopdf(url='example.com', output_file='~/example.pdf')
+    wkhtmltopdf('example.com', '~/example.pdf', '-T 20 -B 20 -g --zoom 1.5')
 
 3. Use from commandline (installed)::
 
-    $ python -m wkhtmltopdf.main example.com ~/example.pdf
-
-4. Use the api (installed)::
-
-    $ python -m wkhtmltopdf.api &
-    $ wget http://localhost:8888/?url=example.com&output_file=example.pdf
-
-Required Arguments:
-~~~~~~~~~~~~~~~~~~~
-
-- **url** - the url to convert to pdf
-- **output_file** - the pdf file that you want to create
-
-Optional Arguments:
-~~~~~~~~~~~~~~~~~~~
-
-- **enable-plugins** (default: True)
-- **disable-javascript** (default: False)
-- **no-background** (default: False)
-- **grayscale** (default: False)
-- **orientation** (default: Portrait)
-- **dpi** (default: 100)
-- **username** (default: None)
-- **password** (default: None)
-- **margin-bottom** (default: 10)
-- **margin-top** (default: 10)
-- **margin-left** (default: 10)
-- **margin-right** (default: 10)
-- **disable-smart-shrinking** (default: False)
-
-
+    $ python -m wkhtmltopdf.main example.com ~/example.pdf -T 20 -B 20 -g --zoom 1.5
