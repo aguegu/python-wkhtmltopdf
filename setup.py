@@ -1,18 +1,19 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='wkhtmltopdf',
-    version='master',
-    description='Simple python wrapper for wkhtmltopdf',
+    name='wkhtmltopdf-wrapper',
+    version='0.2.0',
+    description='A Simpler python wrapper for wkhtmltopdf, inspired by Qoda\'s python-wkhtmltopdf',
     long_description="%s\n\n%s" % (open('README.rst', 'r').read(), open('AUTHORS.rst', 'r').read()),
-    author='Qoda',
-    author_email='jpbydendyk@gmail.com',
+    author='aGuegu',
+    author_email='weihong.guan@gmail.com',
     license='BSD',
-    url='http://github.com/qoda/python-wkhtmltopdf',
+    url='http://github.com/aguegu/python-wkhtmltopdf',
     packages=find_packages(),
     dependency_links=[],
     install_requires=[],
     include_package_data=True,
+    keywords = "wkhtmltopdf pdf",
     classifiers=[
         "Programming Language :: Python",
         "License :: OSI Approved :: BSD License",

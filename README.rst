@@ -1,6 +1,7 @@
-python-wkhtmltopdf
+wkhtmltopdf-wrapper
 ==================
 A simple python wrapper for the wkhtmltopdf lib (https://github.com/wkhtmltopdf/wkhtmltopdf)
+inspired by inspired by Qoda\'s python-wkhtmltopdf
 
 Requirements
 ------------

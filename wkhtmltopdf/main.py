@@ -26,7 +26,7 @@ class WKHtmlToPdf(object):
             else:
                 raise Exception(stderr)
 
-        except OSError, exc:
+        except OSError as exc:
             raise exc
 
 def wkhtmltopdf(url, output_file, options_str=''):
