@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 import os
 import optparse
+import tempfile
 
 from subprocess import Popen
 from subprocess import PIPE
@@ -107,7 +108,7 @@ class WKHtmlToPdf(object):
         # save the file to /tmp if a full path is not specified
         output_path = os.path.split(self.output_file)[0]
         if not output_path:
-            self.output_file = os.path.join('/tmp', self.output_file)
+            self.output_file = os.path.join(tempfile.gettempdir(), self.output_file)
 
         # set the options per the kwargs coming in
         for option in OPTIONS:
@@ -125,16 +126,6 @@ class WKHtmlToPdf(object):
         Render the URL into a pdf and setup the evironment if required.
         """
 
-        # # setup the environment if it isn't set up yet
-        # if not os.getenv('DISPLAY'):
-        #     os.system("Xvfb :0 -screen 0 %sx%sx%s & " % (
-        #         self.screen_resolution[0],
-        #         self.screen_resolution[1],
-        #         self.color_depth
-        #     ))
-        #     os.putenv("DISPLAY", '127.0.0.1:0')
-
-        # execute the command
         command = 'wkhtmltopdf %s "%s" "%s" >> /tmp/wkhtp.log' % (
             " ".join([cmd for cmd in self.params]),
             self.url,
@@ -147,6 +138,7 @@ class WKHtmlToPdf(object):
 
             if retcode == 0:
                 # call was successful
+                print 'output saved to:', self.output_file
                 return
             elif retcode < 0:
                 raise Exception("Terminated by signal: ", -retcode)
