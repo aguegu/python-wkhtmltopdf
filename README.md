@@ -23,16 +23,10 @@ $ sudo apt-get install xfonts-100dpi xfonts-75dpi xfonts-scalable xfonts-cyrilli
 
 2. Install wkhtmltopdf
 
-```bash
-$ sudo apt-get install wkhtmltopdf    
-```
-or goto [http://wkhtmltopdf.org/downloads.html](http://wkhtmltopdf.org/downloads.html) for the latest release (Recommended)
+goto [http://wkhtmltopdf.org/downloads.html](http://wkhtmltopdf.org/downloads.html) for the latest release (Recommended)
 
 ### wkhtmltopdf (OSX)
 
-```bash
-$ brew install wkhtmltopdf
-```
 or goto [http://wkhtmltopdf.org/downloads.html](http://wkhtmltopdf.org/downloads.html) for the latest release (Recommended)
 
 ## wkhtmltopdf-wrapper (Any Platform)
@@ -66,7 +60,7 @@ As I check [qoda/python-wkhtmltopdf](https://github.com/qoda/python-wkhtmltopdf)
 ### from class:
 
 ```python
-  from wkhtmltopdf import WKHtmlToPdf
+  from wkhtmltopdfwrapper import WKHtmlToPdf
   
   wkhtmltopdf = WKHtmlToPdf('-T 20 -B 20 -g --zoom 1.5')
   # option_string
@@ -78,13 +72,13 @@ As I check [qoda/python-wkhtmltopdf](https://github.com/qoda/python-wkhtmltopdf)
 ### from method:
 
 ```python
-  from wkhtmltopdf import wkhtmltopdf
+  from wkhtmltopdfwrapper import wkhtmltopdf
   wkhtmltopdf('example.com', '~/example.pdf', '-T 20 -B 20 -g --zoom 1.5')
 ```
 
 ### from commandline (installed):
 
 ```bash
-  $ python -m wkhtmltopdf.main example.com ~/example.pdf -T 20 -B 20 -g --zoom 1.5
+  $ python -m wkhtmltopdfwrapper.__init__ example.com ~/example.pdf -T 20 -B 20 -g --zoom 1.5
 ```
 
