@@ -64,7 +64,7 @@ This lib is just as simple as that. If anything goes wrong, just check the doc. 
 
 As I check [qoda/python-wkhtmltopdf](https://github.com/qoda/python-wkhtmltopdf), where this repo forked from, it tried to prase args. But it only include a small set of the arguments the command supports. Furthermore, it set default values to this set of arguments and pass them all to the command. For me, it is totally unnecessary and even mistakeful. There is default setting setup and doc in the command. Some arugments may not even work together, as `--page-size` and `--page-height`, `--page-width`. So my solution is just pass the option in as a string, Lazy, flexible and effective.
 
-## from class::
+### from class:
 
 ```python
   from wkhtmltopdf import WKHtmlToPdf
@@ -76,14 +76,14 @@ As I check [qoda/python-wkhtmltopdf](https://github.com/qoda/python-wkhtmltopdf)
   # source url, output file path
 ```  
 
-## Use from method::
+### from method:
 
 ```python
   from wkhtmltopdf import wkhtmltopdf
   wkhtmltopdf('example.com', '~/example.pdf', '-T 20 -B 20 -g --zoom 1.5')
 ```
 
-## Use from commandline (installed)::
+### from commandline (installed):
 
 ```bash
   $ python -m wkhtmltopdf.main example.com ~/example.pdf -T 20 -B 20 -g --zoom 1.5
