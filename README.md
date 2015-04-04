@@ -51,7 +51,7 @@ $ pip install git+https://github.com/aguegu/wkhtmltopdf-wrapper.git
 
 ```bash
 $ git clone https://github.com/aguegu/wkhtmltopdf-wrapper.git
-$ cd python-wkhtmltopdf
+$ cd wkhtmltopdf-wrapper
 $ virtualenv .
 $ pip install -r requirements.pip
 ```
