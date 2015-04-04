@@ -22,7 +22,7 @@ inspired by inspired by Qoda\'s python-wkhtmltopdf
 $ sudo apt-get install xfonts-100dpi xfonts-75dpi xfonts-scalable xfonts-cyrillic
 ```
 
-2. Install wkhtmltopdf:
+2. Install wkhtmltopdf
 
 ```bash
 $ sudo apt-get install wkhtmltopdf    
@@ -66,16 +66,15 @@ $ pip install -r requirements.pip
   from wkhtmltopdf import WKHtmlToPdf
   
   wkhtmltopdf = WKHtmlToPdf('-T 20 -B 20 -g --zoom 1.5')
-  
-  # the option_string would be sent to the wkhtmltopdf command line in 
-  # the exactly the same shape.
-  # so the options can be anything as long as the wkhtmltopdf supports
-  # check its [usage](http://wkhtmltopdf.org/usage/wkhtmltopdf.txt)
-  
   wkhtmltopdf.render('http://www.example.com', '~/example.pdf')
   # the source url, and the output file
 ```  
 
+the option_string would be sent to the wkhtmltopdf command line in exactly the same shape. so the options can be anything as long as the wkhtmltopdf supports. check its [usage](http://wkhtmltopdf.org/usage/wkhtmltopdf.txt).
+So this lib is just as simple as that. If anything goes wrong, just check the doc. If the command execute ok with  wkhtmltopdf dircetly, this wrapper should work too. 
+
+As I check [qoda/python-wkhtmltopdf}(https://github.com/qoda/python-wkhtmltopdf), where this repo forked from, it tried to prase args. But it only include a small set of the arguments the command supports. Furthermore, it set default values to this set of arguments and pass them all to the command. For me, it is totally unnecessary. There is default setting setup and doc in the command. So my solution is just pass the option in as a string, Lazy but effective.
+  
 ## Use from method::
 
 ```python
