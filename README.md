@@ -2,7 +2,7 @@
 
 
 A simple and direct python wrapper for the wkhtmltopdf lib (https://github.com/wkhtmltopdf/wkhtmltopdf)
-inspired by inspired by Qoda\'s python-wkhtmltopdf
+inspired by inspired by [Qoda's python-wkhtmltopdf](https://github.com/qoda/python-wkhtmltopdf)
 
 ## Requirements
 
