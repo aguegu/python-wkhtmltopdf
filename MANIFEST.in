@@ -1,3 +1,3 @@
 include AUTHORS.rst
 include README.rst
-recursive-include wkhtmltopdf *.py
+recursive-include wkhtmltopdfwrapper *.py
