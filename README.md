@@ -1,7 +1,6 @@
 # wkhtmltopdf-wrapper
 
-
-A simple and direct python wrapper for the wkhtmltopdf lib (https://github.com/wkhtmltopdf/wkhtmltopdf)
+A simple and direct python wrapper for the [wkhtmltopdf lib](https://github.com/wkhtmltopdf/wkhtmltopdf)
 inspired by inspired by [Qoda's python-wkhtmltopdf](https://github.com/qoda/python-wkhtmltopdf)
 
 ## Requirements
@@ -45,13 +44,13 @@ $ pip install wkhtmltopdf-wrapper
 ```
 or 
 ```bash
-$ pip install git+https://github.com/aguegu/python-wkhtmltopdf.git    
+$ pip install git+https://github.com/aguegu/wkhtmltopdf-wrapper.git
 ```
 
 2. Development:
 
 ```bash
-$ git clone https://github.com/aguegu/python-wkhtmltopdf.git
+$ git clone https://github.com/aguegu/wkhtmltopdf-wrapper.git
 $ cd python-wkhtmltopdf
 $ virtualenv .
 $ pip install -r requirements.pip
