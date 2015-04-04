@@ -3,8 +3,7 @@
 import os
 import unittest
 
-from wkhtmltopdf.main import WKHtmlToPdf, wkhtmltopdf
-
+from wkhtmltopdfwrapper import *
 
 class MainTestCase(unittest.TestCase):
     def setUp(self):

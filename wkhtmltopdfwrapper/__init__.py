@@ -1,6 +1,15 @@
 #!/usr/bin/env python
+
+VERSION = (0, 3, 0)
+__version__ = ".".join(map(str, VERSION[0:3])) + "".join(VERSION[3:])
+__author__ = "aGuegu(Weihong Guan)"
+__contact__ = "weihong.guan@gmail.com"
+__homepage__ = "https://github.com/aguegu/wkhtmltopdf-wrapper"
+
 from subprocess import Popen
 from subprocess import PIPE
+
+__all__ = ['WKHtmlToPdf', 'wkhtmltopdf']
 
 class WKHtmlToPdf(object):
     
